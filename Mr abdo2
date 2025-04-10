@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع المقالات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+      color: #333;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      padding: 1rem;
+    }
+    .article {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .article:hover {
+      background-color: #eee;
+    }
+    /* إعلان منبثق */
+    #ad-popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #ad-popup .content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    #close-ad {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>  <div id="ad-popup">
+    <div class="content">
+      <h2>إعلان</h2>
+      <p>هذا الإعلان يظهر عند دخول الموقع.</p>
+      <button id="close-ad">إغلاق</button>
+    </div>
+  </div>  <header>
+    مقالات الألعاب
+  </header>  <div class="container">
+    <div class="article" onclick="window.location.href='https://example.com/freefire-download'">
+      طريقة تنزيل لعبة فري فاير
+    </div>
+  </div>  <script>
+    const ad = document.getElementById("ad-popup");
+    const closeBtn = document.getElementById("close-ad");
+
+    closeBtn.onclick = function() {
+      ad.style.display = "none";
+    }
+  </script></body>
+</html>
